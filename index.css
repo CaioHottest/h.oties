@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    padding: 20px 40px; /* Aumenta o espaçamento interno para aumentar a altura da barra */
+    z-index: 2; /* Garante que a barra de navegação fique na frente do vídeo */
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+    text-decoration: none;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Garante que o vídeo cubra toda a área sem distorção */
+}
+
+.video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Ajuste a sombra conforme necessário */
+     }
+
+.content {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique na frente do vídeo */
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+}
